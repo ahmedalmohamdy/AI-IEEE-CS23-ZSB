@@ -32,11 +32,10 @@ def fun_3(lst):
         v=(i-mean)**2
         variance_lst.append(v)
     variance=round(sum(variance_lst)/len(variance_lst),3)
-    Standard_diviation=round(sqrt(variance),3)
+    Standard_diviation=round(variance**(1/2),3)
     print(f"Variance: {variance}\nStandard deviation: {Standard_diviation}")
 
 
-from math import sqrt
 try:
  x=list(input("enter the list numbers here : ").split())
  lst=list(map(float,x))
@@ -53,10 +52,10 @@ except:
     print("something went wrong try again and make sure you enter more than 3 numbers ")
           
 finally:
-    print("Program's ENd ")
+    print("Program's ENd THANKS ")
 
 
-
+#I DON'T USE ANY library      KINDLY deserve bouns?
 
 
 
