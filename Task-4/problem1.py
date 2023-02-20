@@ -10,12 +10,21 @@ def fun_1(lst):
     ma_x=lst[-1]
     if len(lst)%2==0:
         q2=(lst[int(len(lst)/2)]+lst[int(len(lst)/2-1)])/2
-        q1=(lst[1]+lst[2])/2
-        q3=(lst[-2]+lst[-3])/2
+        if (len(lst)/2)%2==0:
+            q1=(lst[int(len(lst)/4)]+lst[int((len(lst)/4)-1)])/2
+            q3=(lst[int(len(lst)*(3/4))]+lst[int((len(lst)*(3/4))-1)])/2
+        else:
+            q1=lst[int((len(lst)-2)/4)]
+            q3=lst[int(((3/4)*len(lst))-.5)]
+            
     else:
         q2=lst[int((len(lst)-1)/2)]
-        q1=lst[1]
-        q3=lst[-2]   
+        if ((len(lst)+1)/2)%2 !=0:
+         q1=(lst[int((len(lst)-1)/4)] + lst[int((len(lst)-5)/4)])/2
+         q3=(lst[int((3*len(lst)-3)/4)] + lst[int((3*len(lst)+1)/4)])/2
+        else:
+         q1=lst[int((len(lst)-3)/4)]
+         q3=lst[int((3*len(lst)-1)/4)]
     return q3,q1,q2,mi_n,ma_x
 
 def fun_2(lst):
